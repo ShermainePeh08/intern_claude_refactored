@@ -5,7 +5,7 @@ description: >
   answer is stable. Use PROACTIVELY after forecast-builder returns, and MUST BE
   USED before any feature is described as important in a written finding.
 tools: Read, Write, Bash
-model: sonnet
+model: opus
 ---
 
 # Feature importance and interpretation
