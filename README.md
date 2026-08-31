@@ -67,6 +67,22 @@ This suggests that Claude does not automatically infer the full scope of
 an EDA from a broad instruction. A short prompt leaves more decisions to
 the agent, causing potentially important checks to be omitted.
 
+**5. Existing project files may be modified without explicit safeguards**
+
+One issue observed in this layer was that the existing project
+`README.md` was **wiped out on two separate runs**.
+
+The README was not part of the requested EDA task, yet without an
+explicit rule governing how existing Markdown files should be handled,
+Claude still modified or replaced it.
+
+It highlights a limitation of relying only on task-level instructions:
+**if a file or behaviour is not explicitly protected, Claude may make
+unintended changes while completing the task.**
+
+This issue becomes an important motivation for testing persistent
+project-level rules in the following layer.
+
 ### Main Takeaway
 
 The base layer shows two separate effects:
