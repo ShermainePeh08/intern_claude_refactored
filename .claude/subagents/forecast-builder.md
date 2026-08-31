@@ -5,7 +5,7 @@ description: >
   benchmark. MUST BE USED for any task producing a forecast, so that the split
   and the benchmark are never improvised. Runs after feature-engineer.
 tools: Read, Write, Bash
-model: sonnet
+model: opus
 ---
 
 # Forecast harness

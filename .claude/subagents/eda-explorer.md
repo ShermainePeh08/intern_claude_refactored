@@ -5,7 +5,7 @@ description: >
   BE USED for any task producing an exploratory finding, so that stationarity,
   significance and lag structure are never improvised. Runs after data-prep.
 tools: Read, Write, Bash
-model: sonnet
+model: opus
 ---
 
 # Exploratory analysis

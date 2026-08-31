@@ -5,7 +5,7 @@ description: >
   contamination and split errors. Use PROACTIVELY once any harness is built and
   MUST BE USED before any forecast result leaves the repository.
 tools: Read, Grep, Glob
-model: sonnet
+model: opus
 ---
 
 # Backtest audit

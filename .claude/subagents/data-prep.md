@@ -6,7 +6,7 @@ description: >
   analysis reads a processed file, so that grain and publication lag are handled
   once, correctly, rather than improvised per notebook.
 tools: Read, Write, Bash
-model: sonnet
+model: opus
 ---
 
 # Data preparation

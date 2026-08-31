@@ -5,7 +5,7 @@ description: >
   feature dictionary. MUST BE USED before any forecasting task, so that lookahead
   cannot enter through a feature. Runs after eda-explorer.
 tools: Read, Write, Bash
-model: sonnet
+model: opus
 ---
 
 # Feature engineering
