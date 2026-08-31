@@ -1,0 +1,5 @@
+driver,grain,pearson_r,p_value,n
+acled_events,weekly,0.3411,0.0024,77
+acled_fatalities,weekly,0.335,0.0029,77
+acled_fatalities_revised,weekly,0.3505,0.0018,77
+hormuz_severity,weekly,0.2359,0.0389,77

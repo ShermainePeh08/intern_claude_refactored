@@ -1,0 +1,7 @@
+driver,pearson_r,pearson_p,spearman_rho,spearman_p,band,significant,n
+acled_events,0.163,0.0014,0.103,0.0445,0.1004,True,381
+acled_fatalities_revised,0.1627,0.0014,0.0671,0.1913,0.1004,True,381
+acled_fatalities,0.1537,0.0026,0.0543,0.2909,0.1004,True,381
+hormuz_severity,0.0806,0.1161,0.0551,0.2832,0.1004,False,381
+rhetoric_index,0.0411,0.4235,-0.0126,0.8057,0.1004,False,381
+tanker_rate_usd,-0.0214,0.6772,-0.0395,0.4419,0.1004,False,381

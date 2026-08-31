@@ -1,0 +1,14 @@
+{
+  "breakpoint": "2026-03-16",
+  "n_before": 305,
+  "n_after": 76,
+  "mean_before": -0.000395,
+  "mean_after": 0.005278,
+  "std_before": 0.012018,
+  "std_after": 0.023132,
+  "welch_t": -2.0696,
+  "welch_p": 0.0415,
+  "levene_stat": 53.4752,
+  "levene_p": 0.0,
+  "what_moved": "mean and variance"
+}
