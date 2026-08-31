@@ -1,0 +1,30 @@
+DATA AUDIT
+======================================================================
+
+daily  (382, 3)  2025-01-13 .. 2026-06-30
+weekly (77, 4)  2025-01-13 .. 2026-06-29
+
+master_daily.csv
+         column   dtype   n  nulls  null_pct  n_unique        min        max
+    brent_close float64 382      0       0.0       377    63.6220    99.2440
+ rhetoric_index float64 382      0       0.0       374    -0.3224     0.9284
+tanker_rate_usd float64 382      0       0.0       382 20972.6000 46290.9000
+
+master_weekly.csv
+                  column dtype  n  nulls  null_pct  n_unique  min  max
+            acled_events int64 77      0       0.0        29    9   55
+        acled_fatalities int64 77      0       0.0        35    2  102
+acled_fatalities_revised int64 77      0       0.0        37    3  146
+         hormuz_severity int64 77      0       0.0         5    0    4
+
+duplicate index values: daily 0, weekly 0
+
+GRAIN
+                  column  n_rows  n_update_events  change_rate                      grain  se_inflation
+             brent_close     382              381        0.997                      daily          1.00
+          rhetoric_index     382              381        0.997                      daily          1.00
+         tanker_rate_usd     382              381        0.997                      daily          1.00
+            acled_events     382               70        0.183 forward-filled (sub-daily)          2.34
+        acled_fatalities     382               71        0.186 forward-filled (sub-daily)          2.32
+acled_fatalities_revised     382               76        0.199 forward-filled (sub-daily)          2.24
+         hormuz_severity     382               43        0.113 forward-filled (sub-daily)          2.98

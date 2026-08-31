@@ -1,0 +1,7 @@
+driver,best_lag,f_stat,p_value,n
+acled_fatalities_revised,1,8.9728,0.0029,381
+acled_fatalities,2,5.8634,0.0031,381
+acled_events,1,7.3623,0.007,381
+rhetoric_index,1,4.7141,0.0305,381
+hormuz_severity,3,2.7642,0.0418,381
+tanker_rate_usd,2,1.7796,0.1701,381

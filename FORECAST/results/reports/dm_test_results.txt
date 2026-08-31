@@ -1,0 +1,46 @@
+FORECAST RESULTS
+======================================================================
+
+            model  horizon  n  rmse_logret  rmse_usd  mae_logret      r2  diracc  cv_rmse  dm_stat  dm_pvalue                                  verdict
+naive_random_walk        1 72     0.022213    1.9276    0.017067 -0.0204  0.0000      NaN      NaN        NaN                                benchmark
+            drift        1 72     0.022352    1.9386    0.017178 -0.0333  0.4306      NaN   1.6210     0.1095 no significant difference from benchmark
+       elasticnet        1 72     0.022342    1.9377    0.017170 -0.0324  0.4583 0.011940   1.5047     0.1368 no significant difference from benchmark
+    random_forest        1 72     0.022308    1.9354    0.016939 -0.0292  0.5000 0.011790   0.2925     0.7708 no significant difference from benchmark
+gradient_boosting        1 72     0.023096    2.0140    0.017527 -0.1032  0.5417 0.012123   1.0525     0.2961 no significant difference from benchmark
+naive_random_walk        5 72     0.046083    3.8572    0.035043 -0.1592  0.0000      NaN      NaN        NaN                                benchmark
+            drift        5 72     0.047526    3.9679    0.035960 -0.2330  0.4444      NaN   1.4035     0.1648 no significant difference from benchmark
+       elasticnet        5 72     0.047552    3.9705    0.035996 -0.2343  0.4583 0.030798   1.4375     0.1550 no significant difference from benchmark
+    random_forest        5 72     0.049874    4.1518    0.038385 -0.3578  0.3333 0.029253   1.7147     0.0908 no significant difference from benchmark
+gradient_boosting        5 72     0.048882    4.0758    0.037824 -0.3043  0.4028 0.032832   2.0617     0.0429                 model loses to benchmark
+
+DM > 0 means the model has HIGHER loss than the benchmark, i.e. the model is WORSE. DM < 0 means the model is better. The p-value is two-sided.
+
+HEADLINE: Nothing beat the naive random walk at the 5% level.
+
+BY REGIME
+            model  horizon       regime  n  rmse_logret  rmse_usd  diracc  dm_stat  dm_pvalue
+naive_random_walk        1     conflict 58     0.023610    2.0893  0.0000      NaN        NaN
+naive_random_walk        1 non_conflict 14     0.015104    1.0121  0.0000      NaN        NaN
+            drift        1     conflict 58     0.023751    2.1009  0.4138   1.5410     0.1288
+            drift        1 non_conflict 14     0.015251    1.0211  0.5000   0.5132     0.6164
+       elasticnet        1     conflict 58     0.023739    2.0999  0.4483   1.4389     0.1556
+       elasticnet        1 non_conflict 14     0.015245    1.0207  0.5000   0.4700     0.6461
+    random_forest        1     conflict 58     0.023741    2.0995  0.5000   0.3674     0.7147
+    random_forest        1 non_conflict 14     0.014980    1.0012  0.5000  -0.1301     0.8985
+gradient_boosting        1     conflict 58     0.024576    2.1854  0.5345   0.9953     0.3238
+gradient_boosting        1 non_conflict 14     0.015531    1.0364  0.5714   0.4480     0.6615
+naive_random_walk        5     conflict 58     0.049414    4.1950  0.0000      NaN        NaN
+naive_random_walk        5 non_conflict 14     0.028383    1.9001  0.0000      NaN        NaN
+            drift        5     conflict 58     0.050878    4.3111  0.4655   1.2523     0.2156
+            drift        5 non_conflict 14     0.029868    1.9931  0.3571   0.3364     0.7419
+       elasticnet        5     conflict 58     0.050910    4.3141  0.4828   1.2873     0.2032
+       elasticnet        5 non_conflict 14     0.029860    1.9924  0.3571   0.3284     0.7478
+    random_forest        5     conflict 58     0.053435    4.5131  0.3276   1.5422     0.1286
+    random_forest        5 non_conflict 14     0.031034    2.0661  0.3571   0.2616     0.7977
+gradient_boosting        5     conflict 58     0.052071    4.4153  0.4138   1.8583     0.0683
+gradient_boosting        5 non_conflict 14     0.032492    2.1615  0.3571   0.4558     0.6561
+
+COEFFICIENTS
+elasticnet coefficient [('realised_return_lag1', 0.0), ('realised_return_lag2', 0.0), ('realised_return_lag3', 0.0), ('realised_return_lag5', 0.0), ('realised_return_lag10', 0.0)]
+random_forest impurity_importance [('tanker_rate_usd_lag10', 0.03856750152956646), ('acled_fatalities_z21_lag2', 0.038096064223993635), ('realised_return_lag2', 0.03726249155757152), ('tanker_rate_usd_lag3', 0.035319301661863076), ('acled_events_z21_lag10', 0.03473720708751417)]
+gradient_boosting impurity_importance [('tanker_rate_usd_z21_lag2', 0.4472931255832228), ('acled_fatalities_z21_lag3', 0.29375948535765123), ('tanker_rate_usd_lag5', 0.12701729001099585), ('realised_return_lag3', 0.07246536092893409), ('tanker_rate_usd_lag3', 0.05946473811919597)]
