@@ -1,0 +1,7 @@
+driver,mean,std,skew,autocorr_1,autocorr_5,n_unique,zero_share
+acled_events,23.1995,11.1108,1.521,0.949,0.735,29,0.0
+acled_fatalities,24.3097,27.2231,1.683,0.982,0.907,35,0.0
+acled_fatalities_revised,33.9501,37.4904,1.67,0.981,0.902,37,0.0
+hormuz_severity,1.4803,0.9882,0.548,0.902,0.503,5,0.118
+rhetoric_index,0.1807,0.223,0.34,0.38,0.331,373,0.0
+tanker_rate_usd,31039.8451,6359.5282,0.371,0.988,0.934,381,0.0

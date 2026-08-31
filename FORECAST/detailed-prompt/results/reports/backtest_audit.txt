@@ -1,0 +1,6 @@
+VERDICT: PASS WITH NOTES
+BLOCKERS:  none
+NOTES:     
+           effective sample size is not stated for the forward-filled ACLED features; any standard error computed on origins alone is optimistic
+CHECKED:   1 split integrity: training ends before the origin with the full purge gap; 2 benchmark contamination: every model scored on identical origins; 3 benchmark present in the results table; 4 unit consistency: both RMSE unit systems agree to first order; 5 sample-size claims match the number of usable origins
+UNCHECKED: 3 feature construction: this script sees the built frame, not the code that built it, so a leaking transform inside feature construction would not appear here

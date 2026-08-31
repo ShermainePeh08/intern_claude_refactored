@@ -1,0 +1,7 @@
+driver,target_mean_bottom,target_mean_top,target_std_bottom,target_std_top,n_per_bucket,std_ratio_top_vs_bottom
+acled_events,0.000115,0.005856,0.011951,0.022072,60,1.847
+acled_fatalities,0.001706,0.005278,0.012415,0.023132,70,1.863
+acled_fatalities_revised,0.001911,0.005278,0.011918,0.023132,65,1.941
+hormuz_severity,4e-06,0.005639,0.011879,0.026119,6,2.199
+rhetoric_index,0.000186,0.001984,0.013021,0.019851,76,1.525
+tanker_rate_usd,-0.001051,-0.003375,0.011786,0.011815,76,1.002

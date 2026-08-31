@@ -1,0 +1,8 @@
+offset_days,date,n_before,n_after,welch_p,levene_p,what_moved
+-21,2026-02-23,290,91,0.0285,0.0,mean and variance
+-14,2026-03-02,295,86,0.0494,0.0,mean and variance
+-7,2026-03-09,300,81,0.0657,0.0,variance
+0,2026-03-16,305,76,0.0415,0.0,mean and variance
+7,2026-03-23,310,71,0.0694,0.0,variance
+14,2026-03-30,315,66,0.1756,0.0,variance
+21,2026-04-06,320,61,0.2267,0.0,variance
