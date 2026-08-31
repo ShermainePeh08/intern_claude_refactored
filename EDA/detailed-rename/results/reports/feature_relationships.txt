@@ -1,0 +1,13 @@
+EDA SUMMARY
+======================================================================
+
+Top driver: acled_fatalities_revised at lag 2, positive, magnitude 0.1621, granger p 0.0029
+Stationarity: 0 of 9 series give an ADF/KPSS disagreement
+Significance: 3 of 6 drivers clear the band
+Multicollinearity: 3 driver(s) above VIF 5
+Regime break at onset: mean and variance
+
+Not supported by this data: any causal claim. Inventories, dollar
+strength and demand are absent from the dataset, so the supportable
+phrasing is that volatility rose during the conflict period, not
+that the conflict caused the move.
