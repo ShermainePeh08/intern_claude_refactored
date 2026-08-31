@@ -1,0 +1,8 @@
+column,n_rows,n_update_events,change_rate,grain,se_inflation
+brent_close,382,381,0.997,daily,1.0
+rhetoric_index,382,381,0.997,daily,1.0
+tanker_rate_usd,382,381,0.997,daily,1.0
+acled_events,382,70,0.183,forward-filled (sub-daily),2.34
+acled_fatalities,382,71,0.186,forward-filled (sub-daily),2.32
+acled_fatalities_revised,382,76,0.199,forward-filled (sub-daily),2.24
+hormuz_severity,382,43,0.113,forward-filled (sub-daily),2.98

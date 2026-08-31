@@ -1,0 +1,13 @@
+STATIONARITY — ADF and KPSS
+statistic, p-value and lag order reported for both tests
+
+                  column   n  adf_stat  adf_p  adf_lag  kpss_stat  kpss_p  kpss_lag                     verdict
+              log_return 381  -18.7343 0.0000        0     0.2344  0.1000         2     stationary (both agree)
+             brent_close 381   -0.3651 0.9158        0     0.5258  0.0358        11 non-stationary (both agree)
+         realised_return 380  -18.6981 0.0000        0     0.2366  0.1000         2     stationary (both agree)
+            acled_events 381   -1.3369 0.6121        5     1.6347  0.0100        11 non-stationary (both agree)
+        acled_fatalities 381   -0.2109 0.9372       15     1.7232  0.0100        11 non-stationary (both agree)
+acled_fatalities_revised 381   -0.4622 0.8992       15     1.7011  0.0100        11 non-stationary (both agree)
+         hormuz_severity 381   -1.1417 0.6981       15     1.2515  0.0100        11 non-stationary (both agree)
+          rhetoric_index 381   -2.0080 0.2831        9     1.6854  0.0100        10 non-stationary (both agree)
+         tanker_rate_usd 381   -1.7225 0.4195        3     1.6273  0.0100        11 non-stationary (both agree)

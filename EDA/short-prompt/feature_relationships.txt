@@ -1,0 +1,9 @@
+EDA SUMMARY
+======================================================================
+
+Top driver by absolute correlation: acled_fatalities
+
+Not supported by this data: any causal claim. Inventories, dollar
+strength and demand are absent from the dataset, so the supportable
+phrasing is that volatility rose during the conflict period, not
+that the conflict caused the move.
