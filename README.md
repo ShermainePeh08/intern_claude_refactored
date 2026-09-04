@@ -16,7 +16,7 @@ plausible-looking one.
 
 ## TL;DR
 
-**_For a more detailed run-through of the experiments, refer to this [file](https://github.com/cmmtscrpr4/Claude_Experiments/Claude_Code_Workflow.pdf). If you are our colleagues here only for the agent artifacts, head [here](https://github.com/cmmtscrpr4/Claude_Experiments/tree/layer-5-commands/.claude)_**
+**_For a more detailed run-through of the experiments, refer to this [file](https://github.com/cmmtscrpr4/Claude_Experiments/blob/main/Claude_Code_Workflow.pdf). If you are our colleagues here only for the agent artifacts, head [here](https://github.com/cmmtscrpr4/Claude_Experiments/tree/layer-5-commands/.claude)_**
 
 The findings from the experiments showed that the most efficient workflow was not to "use the most agentic configuration." 
 
