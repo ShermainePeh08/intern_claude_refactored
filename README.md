@@ -12,10 +12,26 @@ Brent crude returns — is the workload, not the point. It was chosen because it
 enough ways to go quietly wrong that a checklist can tell a good run from a
 plausible-looking one.
 
-Model Used: Opus 4.8
+**Model Used:** Opus 4.8
 
----
+## TL;DR
 
+**_For a more detailed run-through of the experiments, refer to this [file](https://github.com/cmmtscrpr4/Claude_Experiments/blob/main/Claude_Code_Workflow.pdf). If you are our colleagues here only for the agent artifacts, head [here](https://github.com/cmmtscrpr4/Claude_Experiments/tree/layer-5-commands/.claude)_**
+
+The findings from the experiments showed that the most efficient workflow was not to "use the most agentic configuration." 
+
+The results showed a hierarchy: first, remove ambiguity from the task, next, persist stable project knowledge, and finally add delegation only when the task is long or complex enough to benefit from it.
+
+| Comparison | What was found|
+| --- | --- |
+| Short vs Detailed Prompt | Write a proper task specification before adding more architecture. |
+| Short vs Detailed Prompt with Brief + Subagents | A strong architecture cannot replace task details. |
+| Adding Brief to Short prompt | Standing project context helps but only partially. |
+| Adding Rules to Short prompt | Rules rmeove known failure modes and reduce repeated instructions. |
+| Brief with Subagents vs Brief only | Delegation trades more total work for a cleaner main context window. |
+| Inline subagents vs Commands | Use commands for standardisation/reusability, not because they are cheaper. |
+| Plan vs Accept Edits | Use plan mode when a wrong assumption is expensive. |
+ 
 ## The branches
 
 Each layer adds exactly one thing to the layer below it, so a diff between
@@ -23,30 +39,16 @@ adjacent branches is that layer's contribution and nothing else.
 
 | Branch | Adds | What it isolates |
 | --- | --- | --- |
-| `main` | nothing — base project | the floor everything is measured against |
+| `layer-1-base` | nothing — base project | the floor everything is measured against |
 | `layer-2-rules` | `.claude/rules/` | the same rule text as a file rather than typed into the prompt |
-| `layer-3-claude-md` | `CLAUDE.md` | a persistent project brief loaded on every turn |
+| `layer-3-claude-md` | `.claude/CLAUDE.md` | a persistent project brief loaded on every turn |
 | `layer-4-subagents` | `.claude/agents/` | delegation, each agent with its own context window |
 | `layer-5-commands` | `.claude/commands/` | a fixed invocation instead of a remembered sequence |
 
 Nineteen test cases hang off these five branches as their own `case/*` branches —
 one configuration and one output each.
 
-### What each branch holds
-
-```
-main                 datasets/ src/ notebooks/ results/ tests/   (no .claude/ at all)
-layer-2-rules      + .claude/rules/       stats-standards, domain-traps, file-safety
-layer-3-claude-md  + CLAUDE.md            the project brief
-layer-4-subagents  + .claude/agents/      data-prep, eda-explorer, feature-engineer,
-                                          forecast-builder, feature-importance,
-                                          backtest-auditor
-layer-5-commands   + .claude/commands/    /run-analysis, /run-forecast
-```
-
 Overlays are cumulative: layer 5 contains everything layers 2–4 added.
-
----
 
 ## The 19 cases
 
@@ -55,10 +57,10 @@ carried-over context is a treatment nobody intended to apply.
 
 | Case | Branch | Stage | Prompt | What it isolates |
 | --- | --- | --- | --- | --- |
-| L1-EDA-01 | `main` | EDA | short | the floor |
-| L1-EDA-02 | `main` | EDA | short + rules pasted in | rules delivered in the message |
-| L1-EDA-03 | `main` | EDA | detailed | the number every layer must beat |
-| L1-EDA-04 | `main` | EDA | detailed + rules pasted in | do rules add anything to a detailed prompt |
+| L1-EDA-01 | `layer-1-base` | EDA | short | the floor |
+| L1-EDA-02 | `layer-1-base` | EDA | short + rules pasted in | rules delivered in the message |
+| L1-EDA-03 | `layer-1-base` | EDA | detailed | the number every layer must beat |
+| L1-EDA-04 | `layer-1-base` | EDA | detailed + rules pasted in | do rules add anything to a detailed prompt |
 | L2-EDA-01 | `layer-2-rules` | EDA | short | vs L1-EDA-02: same text, file instead of message |
 | L2-EDA-02 | `layer-2-rules` | EDA | detailed | what rules say that a good prompt does not |
 | L2-FC-01 | `layer-2-rules` | forecast | short | forecasting has more ways to go wrong |
@@ -95,8 +97,6 @@ tokens and as a share of the window · total tokens across main thread and
 subagents · lines of code delivered · which subagents fired and their context
 share · clarifying questions asked before work began · model and Claude Code
 version.
-
----
 
 ### The one thing nothing fixed
 
