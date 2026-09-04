@@ -14,13 +14,11 @@ plausible-looking one.
 
 **Model Used:** Opus 4.8
 
----
-
 ## TL;DR
 
 _If you are our colleagues here only for the agent artifacts, head [here](https://github.com/cmmtscrpr4/intern_claude_refactored/tree/layer-5-commands/.claude)_
 
-The findings from the experiments showed that the most efficient workflow was not to "user the most agentic configuration." 
+The findings from the experiments showed that the most efficient workflow was not to "use the most agentic configuration." 
 
 The results showed a hierarchy: first, remove ambiguity from the task, next, persist stable project knowledge, and finally add delegation only when the task is long or complex enough to benefit from it.
 
@@ -33,8 +31,6 @@ The results showed a hierarchy: first, remove ambiguity from the task, next, per
 | Brief with Subagents vs Brief only | Delegation trades more total work for a cleaner main context window. |
 | Inline subagents vs Commands | Use commands for standardisation/reusability, not because they are cheaper. |
 | Plan vs Accept Edits | Use plan mode when a wrong assumption is expensive. |
-
----
 
 ## The branches
 
@@ -53,8 +49,6 @@ Nineteen test cases hang off these five branches as their own `case/*` branches 
 one configuration and one output each.
 
 Overlays are cumulative: layer 5 contains everything layers 2–4 added.
-
----
 
 ## The 19 cases
 
@@ -103,8 +97,6 @@ tokens and as a share of the window · total tokens across main thread and
 subagents · lines of code delivered · which subagents fired and their context
 share · clarifying questions asked before work began · model and Claude Code
 version.
-
----
 
 ### The one thing nothing fixed
 
