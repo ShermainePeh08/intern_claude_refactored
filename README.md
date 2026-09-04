@@ -23,9 +23,9 @@ adjacent branches is that layer's contribution and nothing else.
 
 | Branch | Adds | What it isolates |
 | --- | --- | --- |
-| `main` | nothing — base project | the floor everything is measured against |
+| `layer-1-base` | nothing — base project | the floor everything is measured against |
 | `layer-2-rules` | `.claude/rules/` | the same rule text as a file rather than typed into the prompt |
-| `layer-3-claude-md` | `CLAUDE.md` | a persistent project brief loaded on every turn |
+| `layer-3-claude-md` | `.claude/CLAUDE.md` | a persistent project brief loaded on every turn |
 | `layer-4-subagents` | `.claude/agents/` | delegation, each agent with its own context window |
 | `layer-5-commands` | `.claude/commands/` | a fixed invocation instead of a remembered sequence |
 
@@ -35,7 +35,7 @@ one configuration and one output each.
 ### What each branch holds
 
 ```
-main                 datasets/ src/ notebooks/ results/ tests/   (no .claude/ at all)
+layer-1-base         datasets/ src/ notebooks/ results/ tests/   (no .claude/ at all)
 layer-2-rules      + .claude/rules/       stats-standards, domain-traps, file-safety
 layer-3-claude-md  + CLAUDE.md            the project brief
 layer-4-subagents  + .claude/agents/      data-prep, eda-explorer, feature-engineer,
@@ -55,10 +55,10 @@ carried-over context is a treatment nobody intended to apply.
 
 | Case | Branch | Stage | Prompt | What it isolates |
 | --- | --- | --- | --- | --- |
-| L1-EDA-01 | `main` | EDA | short | the floor |
-| L1-EDA-02 | `main` | EDA | short + rules pasted in | rules delivered in the message |
-| L1-EDA-03 | `main` | EDA | detailed | the number every layer must beat |
-| L1-EDA-04 | `main` | EDA | detailed + rules pasted in | do rules add anything to a detailed prompt |
+| L1-EDA-01 | `layer-1-base` | EDA | short | the floor |
+| L1-EDA-02 | `layer-1-base` | EDA | short + rules pasted in | rules delivered in the message |
+| L1-EDA-03 | `layer-1-base` | EDA | detailed | the number every layer must beat |
+| L1-EDA-04 | `layer-1-base` | EDA | detailed + rules pasted in | do rules add anything to a detailed prompt |
 | L2-EDA-01 | `layer-2-rules` | EDA | short | vs L1-EDA-02: same text, file instead of message |
 | L2-EDA-02 | `layer-2-rules` | EDA | detailed | what rules say that a good prompt does not |
 | L2-FC-01 | `layer-2-rules` | forecast | short | forecasting has more ways to go wrong |
