@@ -16,7 +16,7 @@ plausible-looking one.
 
 ## TL;DR
 
-_If you are our colleagues here only for the agent artifacts, head [here](https://github.com/cmmtscrpr4/intern_claude_refactored/tree/layer-5-commands/.claude)_
+**_For a more detailed run-through of the experiments, refer to this [file](https://github.com/cmmtscrpr4/Claude_Experiments/Claude_Code_Workflow.pdf). If you are our colleagues here only for the agent artifacts, head [here](https://github.com/cmmtscrpr4/Claude_Experiments/tree/layer-5-commands/.claude)_**
 
 The findings from the experiments showed that the most efficient workflow was not to "use the most agentic configuration." 
 
@@ -31,7 +31,7 @@ The results showed a hierarchy: first, remove ambiguity from the task, next, per
 | Brief with Subagents vs Brief only | Delegation trades more total work for a cleaner main context window. |
 | Inline subagents vs Commands | Use commands for standardisation/reusability, not because they are cheaper. |
 | Plan vs Accept Edits | Use plan mode when a wrong assumption is expensive. |
-
+ 
 ## The branches
 
 Each layer adds exactly one thing to the layer below it, so a diff between
