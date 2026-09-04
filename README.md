@@ -32,18 +32,6 @@ adjacent branches is that layer's contribution and nothing else.
 Nineteen test cases hang off these five branches as their own `case/*` branches —
 one configuration and one output each.
 
-### What each branch holds
-
-```
-layer-1-base         datasets/ src/ notebooks/ results/ tests/   (no .claude/ at all)
-layer-2-rules      + .claude/rules/       stats-standards, domain-traps, file-safety
-layer-3-claude-md  + CLAUDE.md            the project brief
-layer-4-subagents  + .claude/agents/      data-prep, eda-explorer, feature-engineer,
-                                          forecast-builder, feature-importance,
-                                          backtest-auditor
-layer-5-commands   + .claude/commands/    /run-analysis, /run-forecast
-```
-
 Overlays are cumulative: layer 5 contains everything layers 2–4 added.
 
 ---
