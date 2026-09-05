@@ -16,7 +16,7 @@ plausible-looking one.
 
 ## TL;DR
 
-**_For a more detailed run-through of the experiments, refer to this [file](https://github.com/cmmtscrpr4/Claude_Experiments/blob/main/Claude_Code_Workflow.pdf). If you are our colleagues here only for the agent artifacts, head [here](https://github.com/cmmtscrpr4/Claude_Experiments/tree/layer-5-commands/.claude)_**
+**_For a more detailed run-through of the experiments, refer to this [file](https://github.com/cmmtscrpr4/Claude_Experiments/blob/main/Claude_Code_Workflow.pdf)._**
 
 The findings from the experiments showed that the most efficient workflow was not to "use the most agentic configuration." 
 
@@ -89,8 +89,7 @@ Two deliberate asymmetries:
 
 ### What gets recorded per case
 
-Quality comes from the checklist. Everything else is typed by hand into
-`.study/metrics.yaml`, and a blank is always better than a guess:
+Quality comes from the checklist:
 
 setup effort (1–10, subjective) · token-limit share · wall clock · peak context in
 tokens and as a share of the window · total tokens across main thread and
